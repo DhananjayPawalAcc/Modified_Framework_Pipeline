@@ -14,13 +14,28 @@ This pipeline is designed to handle multiple video sources and models for **obje
 
 Before running the pipeline, ensure you have the following dependencies installed:
 
-- Python 3.x
-- OpenCV
-- PyTorch
-- YOLOv5 or YOLOv8 (or any compatible detection, segmentation, or classification model)
-- Requests (for YouTube URLs)
+- opencv-python
+- ultralytics
+- pytube
+- yt_dlp
+
 
 To install the required dependencies, run the following command:
 
 ```bash
 pip install -r requirements.txt
+```
+
+
+## Project structure
+
+```bash
+├── cameraReader.py           # Handles video frame capturing from sources
+├── model.py                  # Contains different model classes (YOLO detection, segmentation, classification)
+├── model_initializer.py      # Initializes the selected model based on user input
+├── visualizer.py             # Handles visualization and result display
+├── main.py                   # Runs the entire pipeline, supporting multiple sources
+├── requirements.txt          # Python dependencies
+└── README.md                 # Project documentation
+```
+
